@@ -163,6 +163,7 @@ header.hero{
   padding:.85rem 0;border-top:3px solid var(--red-deep);border-bottom:3px solid var(--red-deep);
   transform:rotate(-1.2deg) scale(1.02);position:relative;z-index:3;
 }
+.marquee:not(.straight){margin-top:3.5rem}
 .marquee.straight{transform:none}
 .marquee-track{
   display:flex;gap:3rem;white-space:nowrap;width:max-content;
@@ -354,7 +355,9 @@ footer{background:var(--red-deep);color:var(--cream);padding:4rem 1.4rem 2rem}
   .story .wrap,.loc .wrap{grid-template-columns:1fr}
   .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
   .nav-links{
-    position:fixed;inset:0;top:72px;background:var(--cream);
+    position:fixed;top:72px;left:0;right:0;
+    height:calc(100vh - 72px);height:calc(100dvh - 72px);
+    background:var(--cream);box-shadow:var(--shadow);
     flex-direction:column;justify-content:flex-start;padding-top:3rem;gap:2rem;
     transform:translateX(100%);transition:transform .3s;
   }
